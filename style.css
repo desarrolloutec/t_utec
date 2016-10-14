@@ -1,0 +1,277 @@
+/*
+ Theme Name:   t_utec
+ Theme URI:    http://utec-celaya.edu.mx/sitio/
+ Description:  Tempera Child Theme adapted to improve UTEC Celaya main site
+ Author:       Departamento de Sistemas UTEC Celaya
+ Author URI:   N/A
+ Template:     tempera
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         UTEC Celaya, responsive, Tempera child
+ Text Domain:  utec-celaya
+*/
+
+/*
+ * Reglas para cabecera
+ */
+#bg_image {
+	padding-top: 1em;
+}
+
+/*
+ * Reglas para el footer
+ */
+#utec_footer_extras {
+	/* Acomodar seccion */
+	font-size: 0.8em;
+	padding-top: 1em;
+	text-align: center;
+}
+
+#utec_footer_extras a {
+	/* cambiar color de los links */
+	color: #CCC;
+}
+#utec_footer_extras a:hover {
+	/* adornar al evento del mouse */
+	text-decoration: underline;
+}
+#sfooter {
+	/* subir iconos de redes sociales */
+	margin-top: -50px !important;
+}
+#sfooter a {
+	background-color: #444 !important;
+}
+
+
+/*
+ * Reglas para el header
+ */
+#topbar .socials a {
+	/* Mantener circulo naranja */
+	/*background-color: #E25D16;
+	margin-right: 0.8em;*/
+}
+.searchform {
+	/* separar buscador del borde superior */
+     padding-top: 40px;
+} 
+
+/*
+ * Reglas para vista y efectos de leyenda "Noticias"
+ */
+#front-text2 h1 {
+	padding-top:1em;
+	font-weight: normal !important;
+	border-bottom:1px solid #D3D3D3;
+	position: relative;
+	/*color: rgba(0,0,0,.4);*/
+
+}
+#front-text2 h1:hover, #front-text2 h1:focus {
+	/*color: rgba(0,0,0,.4);*/
+	outline: none;
+}
+#front-text2 h1:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: #F47627;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: 0.3s;
+}
+#front-text2 h1:hover:before, #front-text2 h1:focus:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+
+
+/*
+ * Botones de continua leyendo
+ */
+a.continue-reading-link {
+	/* no convertir a mayusculas */
+	text-transform: none;
+}
+
+a.continue-reading-link:after {
+	/* no mostrar linea abajo */
+	display: none;
+}
+
+.pagination_container {
+	border:1px solid white;
+	overflow: hidden;
+	margin-bottom:5em;
+}
+
+.continue-reading-link {
+	/* redondear bordes */
+	border-radius: 10px;
+}
+
+
+
+
+/*
+ * Seccion de cuadritos
+ */
+
+#frontpage #pp-afterslider {
+	/* quita los margenes del tema sobre la seccion principañ*/
+	margin: 0 !important;
+}
+#front-columns * {
+	/* quitar margenes de elementos internos (los cuadritos) */
+	display: block;
+	width: auto;
+	float: none;
+	overflow: hidden;
+	margin: 0 !important;
+}
+
+/* recupera los margenes del tema (para la seccion de noticias) */
+/*#frontpage #pp-afterslider .post {
+	width: 50% !important;
+	margin: 0 !important;
+}
+#frontpage #pp-afterslider .post * {
+	margin: 8px !important;
+	margin-top: 0 !important;
+}*/
+
+
+/*
+ * Cuadritos centrales
+ */
+.img-fondo {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.columna-central {
+	min-width: 31%;
+	padding: 1.7%;
+}
+.columna-central img {
+	max-width: 100%;
+	height: auto;
+	transition: 1.2s ease;
+ 	-moz-transition: 1.2s ease; /* Firefox */
+ 	-webkit-transition: 1.2s ease; /* Chrome - Safari */
+ 	-o-transition: 1.2s ease; /* Opera */
+}
+.columna-central img:hover {
+	transform : scale(1.1);
+	-moz-transform : scale(1.1); /* Firefox */
+	-webkit-transform : scale(1.1); /* Chrome - Safari */
+	-o-transform : scale(1.1); /* Opera */
+	-ms-transform : scale(1.1); /* IE9 */
+	/*overflow: hidden;*/
+}
+
+#cuadrito1 {
+	/* pegar cuadrito a la izquierda */
+	padding-left: 0 !important;
+}
+#cuadrito2 { }
+#cuadrito3 {
+	/* pegar cuadrito a la derecha */
+	padding-right: 0 !important;
+}
+#cuadrito4 {
+	/* pegar cuadrito a la derecha y asignar tamaño sobrante */
+	padding-right: 0 !important;
+	min-width: 65.5% !important;
+}
+
+#cuadrito5 {
+	padding-left: 0 !important;
+	width: 48.3% !important;
+}
+#cuadrito6 {
+	padding-right: 0 !important;
+	width: 48.3% !important;
+}
+.cuadrito-extra {
+	padding-left: 0 !important;
+	width: 100% !important;
+}
+
+@media screen and (min-width: 481px) and (max-width: 801px) {
+	#front-columns { }
+	#front-columns * {
+		/* quitar margenes de elementos internos (los cuadritos) */
+		display: block;
+		width: auto;
+		margin: 0 auto;
+		overflow: hidden;
+		margin: 1.2% !important;
+	}
+	.img-fondo {
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	.columna-central {
+		padding: 0 !important;
+	}
+	.columna-central img {
+		max-width: 100%;
+		height: auto;
+		transition: 1.2s ease;
+	 	-moz-transition: 1.2s ease; /* Firefox */
+	 	-webkit-transition: 1.2s ease; /* Chrome - Safari */
+	 	-o-transition: 1.2s ease; /* Opera */
+	}
+
+	#cuadrito1 {
+
+	}
+	#cuadrito1, #cuadrito2, #cuadrito3 {
+		min-width: 47%;
+	}
+	#cuadrito3 {
+		
+	}
+	#cuadrito4 {
+		width: 96.5% !important;
+	}
+
+	#cuadrito5 {
+		padding-left: 0 !important;
+		width: 47% !important;
+	}
+
+	#cuadrito6 {
+		padding-right: 0 !important;
+		width: 47% !important;
+	}
+
+}
+
+@media screen and (max-width: 480px){
+	/*
+	 * Ajustar seccion de noticias
+	 */
+	#frontpage #pp-afterslider .post {
+		width: 100% !important;
+		margin: 0 !important;
+	}
+
+	
+	#cuadrito5 {
+		padding: 1.7% !important;
+		width: 100% !important;
+	}
+
+	#cuadrito6 {
+		padding: 1.7% !important;
+		width: 100% !important;
+	}
+}
